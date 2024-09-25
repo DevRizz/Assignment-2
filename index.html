@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Directory Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #2980b9;
+        }
+
+        .employee-list {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .employee-list ol {
+            padding-left: 20px;
+        }
+
+        .employee-list li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .employee-list a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .employee-list a:hover {
+            text-decoration: underline;
+        }
+
+        .employee-details {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .map-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Company Directory Portal</h1>
+
+        <section class="registration-form">
+            <h2>Employee Registration</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <select required>
+                    <option value="">Select Department</option>
+                    <option value="hr">Human Resources</option>
+                    <option value="it">Information Technology</option>
+                    <option value="finance">Finance</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                <input type="number" placeholder="Employee ID" required>
+                <input type="url" placeholder="Profile Picture URL" required>
+                <button type="submit">Register Employee</button>
+            </form>
+        </section>
+
+        <section class="employee-list">
+            <h2>Employee List</h2>
+            <ol>
+                <li><a href="mailto:john.doe@company.com">John Doe - john.doe@company.com</a></li>
+                <li><a href="mailto:jane.smith@company.com">Jane Smith - jane.smith@company.com</a></li>
+                <li><a href="mailto:bob.johnson@company.com">Bob Johnson - bob.johnson@company.com</a></li>
+                <li><a href="mailto:alice.williams@company.com">Alice Williams - alice.williams@company.com</a></li>
+            </ol>
+        </section>
+
+        <section class="employee-details">
+            <h2>Employee Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Profile Picture</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>1001</td>
+                        <td>Human Resources</td>
+                        <td><img style="width: 30px; height: 30px; border-radius: 50%;" src="https://www.tadpole.co.nz/wp-content/uploads/2021/02/team-1.jpg" alt="John Doe"></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>1002</td>
+                        <td>Information Technology</td>
+                        <td><img style="width: 30px; height: 30px; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_12ffm1d7Z5lxa3xetJm2g1oU5_x9q1S26A&s" alt="Jane Smith"></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>1003</td>
+                        <td>Finance</td>
+                        <td><img style="width: 30px; height: 30px; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-K_oW4iD6v54axbpXBq6rnlIJtelr0weOQ&s" alt="Bob Johnson"></td>
+                    </tr>
+                    <tr>
+                        <td>Alice Williams</td>
+                        <td>1004</td>
+                        <td>Marketing</td>
+                        <td><img style="width: 30px; height: 30px; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROD9dybiJg_d_0ayn5OJIUNcYgrrD8if_zaQ&s" alt="Alice Williams"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="map-container">
+            <h2>Company Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553850174!2d78.03995351503737!3d27.175144783021605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1629795000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </div>
+</body>
+</html>
